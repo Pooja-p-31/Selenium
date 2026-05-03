@@ -1,0 +1,19 @@
+package day21;
+
+public class FirstTestCase {
+	
+	
+	/*
+		Test case
+		---
+		1) Launch browser (chrome)
+		2) Open URL https://demo.opencart.com/ 
+		3) Validate title should be "Your Store" 
+		4) close browser
+	 */
+
+	public static void main(String[] args) {
+		
+	}
+
+}

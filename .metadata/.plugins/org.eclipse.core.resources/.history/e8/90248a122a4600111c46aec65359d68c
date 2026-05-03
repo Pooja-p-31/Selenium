@@ -1,0 +1,20 @@
+package assignment;
+
+public class Assignment_01 {
+
+	/*
+		Assignment
+		1) Launch browser (edge)
+		2) Open URL https://demo.nopcommerce.com/ 
+		3) Validate title should be
+		4) close page
+		"nopCommerce demo store'
+	 */
+	
+	public static void main(String[] args) {
+
+		WebDriver driver = new EdgeDriver();
+		
+	}
+
+}

@@ -1,0 +1,35 @@
+package assignment;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Assignment_02 {
+
+	/* 
+	Assignment
+	1) Launch browser (firefox)
+	2) Open URL https://cobrandly.projive.com/
+	3) Validate title should be
+	4) close page
+	"Cobrandly"
+    */
+	
+	public static void main(String[] args) {
+		
+		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("https://cobrandly.projive.com/");
+		
+		String actual_resultString = driver.getTitle();
+		if(actual_resultString.equals("Cobrandly"))
+		{
+			System.out.println("Test Case is Passed...");
+		}
+		else 
+		{
+			System.err.println("Test Case is Failed...");
+		}
+		
+	}
+
+}

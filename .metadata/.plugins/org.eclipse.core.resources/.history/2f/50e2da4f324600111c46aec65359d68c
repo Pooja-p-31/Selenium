@@ -1,0 +1,41 @@
+package assignment;
+
+import javax.crypto.SealedObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Assignment_03 {
+
+	/*
+	 * 1. Launch Chrome browser
+	   2. Open https://demo.nopcommerce.com/
+	   3. Validate the title ("nopCommerce demo store. Home page title")
+  	   4. Find the Search box on the page and type something into it (e.g. "Apple")
+	   5. Click the Search button
+	   6. Validate that the new page title contains the word "Search" or your search term
+	   7. Close the browser
+	 * 
+	 */
+	
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://demo.nopcommerce.com/");
+		String actual_result = driver.getTitle();
+		if (actual_result.equals("nopCommerce demo store. Home page title")) 
+		{
+			System.out.println("Correct");
+		}
+		else {
+			System.out.println("Incorrect");
+		}
+		driver.findElement(By.id("small-searchterms")).sendKeys("Apple");
+		
+	    
+		
+
+	}
+
+}

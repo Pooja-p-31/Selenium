@@ -1,0 +1,42 @@
+package day21;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstTestCase {
+	
+	
+	/*
+		Test case
+		---
+		1) Launch browser (chrome)
+		2) Open URL https://www.google.com 
+		3) Validate title should be "Google" 
+		4) close browser
+	 */
+
+	public static void main(String[] args) {
+		// 1) Launch browser (chrome)
+		//ChromeDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
+
+		// 2) Open URL https://www.google.com 
+		driver.get("https://www.google.com");
+		
+		// 3) Validate title should be "Google" 
+		String actual_title = driver.getTitle();
+		if(actual_title.equals("Google"))
+		{
+			System.out.println("Test Passed!..");
+		}
+		else 
+		{
+			System.out.println("Test Failed!..");
+		}
+		
+		// 4) close browser
+		driver.close();
+		//driver.quit();
+		}
+
+}

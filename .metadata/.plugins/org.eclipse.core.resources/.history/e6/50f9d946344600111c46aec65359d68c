@@ -1,0 +1,58 @@
+
+
+	/*
+	 * 1. Launch Chrome browser
+	   2. Open https://demo.nopcommerce.com/
+	   3. Validate the title ("nopCommerce demo store. Home page title")
+  	   4. Find the Search box on the page and type something into it (e.g. "Apple")
+	   5. Click the Search button
+	   6. Validate that the new page title contains the word "Search" or your search term
+	   7. Close the browser
+	 * 
+	 */
+	
+package assignment;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Assignment_03 {
+
+    public static void main(String[] args) {
+
+        // 1) Launch Chrome
+        WebDriver driver = new ChromeDriver();
+
+        // 2) Open URL
+        driver.get("https://demo.nopcommerce.com/");
+
+        // 3) Validate home page title
+        String actual_result = driver.getTitle();
+        if (actual_result.equals("nopCommerce demo store. Home page title")) {
+            System.out.println("Home Page Title - Correct ✅");
+        } else {
+            System.out.println("Home Page Title - Incorrect ❌");
+        }
+
+        // 4) Find search box and type "Apple"
+        WebElement searchBox = driver.findElement(By.id("small-searchterms"));
+        searchBox.sendKeys("Apple");
+
+        // 5) Find search BUTTON and click it
+        WebElement searchBtn = driver.findElement(By.cssSelector("button.search-box-button"));
+        searchBtn.click();
+
+        // 6) Validate new page title contains "Search"
+        String search_page_title = driver.getTitle();
+        if (search_page_title.contains("Search")) {
+            System.out.println("Search Page Title - Correct ✅");
+        } else {
+            System.out.println("Search Page Title - Incorrect ❌");
+        }
+
+        // 7) Close browser
+        driver.quit();
+    }
+}

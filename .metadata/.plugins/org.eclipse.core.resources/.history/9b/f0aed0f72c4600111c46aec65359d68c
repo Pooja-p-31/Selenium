@@ -1,0 +1,19 @@
+package assignment;
+
+public class Assignment_02 {
+
+	/* 
+	Assignment
+	1) Launch browser (firefox)
+	2) Open URL https://cobrandly.projive.com/
+	3) Validate title should be
+	4) close page
+	"Cobrandly"
+    */
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
