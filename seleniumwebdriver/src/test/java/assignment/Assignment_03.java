@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Assignment_03 {x
+public class Assignment_03 {
 
     public static void main(String[] args) {
 
