@@ -42,6 +42,8 @@ public class Locator_Demo {
 		 * System.out.println("Total number of navbar links are:" +NavBars.size());
 		 */
 		
+		//driver.findElement(By.linkText("Explore")).click();
+		
 		WebElement menu = driver.findElement(By.className("nav-menu"));
 		List<WebElement> links = menu.findElements(By.tagName("a"));
 
